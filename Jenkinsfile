@@ -2,10 +2,7 @@
 
 pipeline {
     agent any
-    tools {
-        maven 'M3'
-        jdk 'JAVA_HOME'
-    }
+
     stages {
         stage ('Initialize') {
             steps {
@@ -18,7 +15,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn -Dmaven.test.failure.ignore=true clean install' 
             }
             post {
                 success {
