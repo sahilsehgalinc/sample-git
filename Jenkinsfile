@@ -48,3 +48,4 @@ pipeline {
 	
 	// Enables timestamp to add on the console
 	options { timestamps() }
+}
