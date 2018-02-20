@@ -23,7 +23,7 @@ pipeline {
 	//	echo "${env.DB_URL2}"
 	//}
 	
-	
+    stages {	
 	
 	// Triggers build everyday at 11 PM
 	triggers { pollSCM('H 23 * * *') }
@@ -48,4 +48,5 @@ pipeline {
 	
 	// Enables timestamp to add on the console
 	options { timestamps() }
+  }
 }
